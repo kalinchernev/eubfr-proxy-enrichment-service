@@ -21,3 +21,11 @@ curl --request GET \
   --url 'http://localhost:3001/service/data/EXR/A.BGN.EUR.SP00.A?detail=dataonly&endPeriod=2018&startPeriod=2018' \
   --header 'accept: '\''application/vnd.sdmx.data+json;version=1.0.0-wd'\'''
 ```
+
+An ngrok proxy of the proxy:
+
+```
+curl --request GET \
+  --url 'http://317c41c8.ngrok.io/service/data/EXR/A.BGN.EUR.SP00.A?detail=dataonly&endPeriod=2018&startPeriod=2018' \
+  --header 'accept: '\''application/vnd.sdmx.data+json;version=1.0.0-wd'\'''
+```
