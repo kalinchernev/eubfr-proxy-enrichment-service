@@ -1,0 +1,17 @@
+{
+  "name": "eubfr-proxy-enrichment-service",
+  "version": "1.0.0",
+  "description": "Used to simulate failures of a given third party enrichment service.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Kalin Chernev",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "express-http-proxy": "^1.5.0",
+    "request-promise-native": "^1.0.5"
+  }
+}
