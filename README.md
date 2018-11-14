@@ -1,6 +1,6 @@
 # EUBFR Proxy Enrichment Service
 
-During enrichment processes, sometimes a third party service could be down or experience difficulties. This service enables you to proxy a given service so that simulating such failures.
+During enrichment processes, sometimes a third party service could be down or experience difficulties. This service enables you to proxy a given third party service and simulating failures.
 
 Having predictable failures on top of an actual service facilitates the development of fail-safe and more resilient sub-systems.
 
@@ -31,3 +31,7 @@ There is an example `.env` file (`.env.example`) where you can specify options. 
 PORT=3001
 SERVICE=https://sdw-wsrest.ecb.europa.eu
 ```
+
+### Tips and tricks
+
+Local service could be used by the outside world by applications such as [ngrok](https://ngrok.com/).
