@@ -1,6 +1,6 @@
 # EUBFR Proxy Enrichment Service
 
-During enrichment processes, sometimes a third party service could be down or experience difficulties. This service enables you to proxy a given third party service and simulating failures.
+During enrichment processes, sometimes a third party service could be down or experience difficulties. This service enables you to proxy a given third party service and simulate failures.
 
 Having predictable failures on top of an actual service facilitates the development of fail-safe and more resilient sub-systems.
 
