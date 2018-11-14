@@ -34,4 +34,5 @@ SERVICE=https://sdw-wsrest.ecb.europa.eu
 
 ### Tips and tricks
 
-Local service could be used by the outside world by applications such as [ngrok](https://ngrok.com/).
+- Local service could be used by the outside world by applications such as [ngrok](https://ngrok.com/).
+- For faster iterations on making requests to a given service use `exampleRequest.js`. In actual handler, make sure to return callback with an error to signal to AWS Lambda to fail correctly. (i.e. ending up in a dead letter queue)
