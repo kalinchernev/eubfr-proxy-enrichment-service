@@ -6,23 +6,20 @@ const { PORT, SERVICE } = process.env;
 
 const app = express();
 
-const coinToss = () => Math.random() > 0.5;
+const param = {
+  proxyReqPathResolver(req) {
+    // Let it work. Return original request path.
+    // return req.url;
 
-// Depends on luck.
-// const getHost = () => (coinToss() ? "http://httpstat.us" : SERVICE);
+    // Make it fail. Enforce specific code for http://httpstat.us/
+    return "/500";
+  }
+};
 
-// Always fails.
-const getHost = () => SERVICE;
+// Let it work.
+// app.get("/*", proxy(SERVICE, param));
 
-app.get(
-  "/*",
-  proxy(getHost, {
-    memoizeHost: false,
-    proxyReqPathResolver(req) {
-      // return "/500";
-      return req.url;
-    }
-  })
-);
+// Make it fail.
+app.get("/*", proxy("http://httpstat.us", param));
 
 app.listen(PORT, () => console.log(`Enrichment service proxy at ${PORT}`));
